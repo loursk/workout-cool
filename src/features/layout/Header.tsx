@@ -10,7 +10,9 @@ import { ThemeToggle } from "@/features/theme/ThemeToggle";
 import { ReleaseNotesDialog } from "@/features/release-notes";
 import { useLogout } from "@/features/auth/model/useLogout";
 import { useSession } from "@/features/auth/lib/auth-client";
+import { WorkoutStreakHeader } from "@/components/ui/workoutstreakheader";
 import { Link } from "@/components/ui/link";
+
 
 export const Header = () => {
   const session = useSession();
@@ -47,6 +49,9 @@ export const Header = () => {
           </div>
         </Link>
       </div>
+
+      {/* WorkoutStreak */}
+      <WorkoutStreakHeader />
 
       {/* User Menu */}
       <div className="navbar-end">
